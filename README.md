@@ -1,1 +1,1 @@
-# To find the DNS records of a domain
+# To find the DNS record of a domain
