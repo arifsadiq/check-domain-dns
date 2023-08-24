@@ -1,10 +1,16 @@
 #!/bin/bash
 
-echo "Please enter the domain name:"
-read a
+# Author: Arif Sadiq
 
-echo "The IP address of $a is `dig +short $a`
+echo "Enter the domain name:"
+read dom
+
+ip=`dig +short $dom`
+ns=`dig +short $dom ns`
+mx=`dig +short $dom mx`
+
+echo "The IP address of $dom is $ip"
 echo
-echo "The nameserver of $a is `dig +short $a ns`
+echo "The nameserver of $dom are $ns"
 echo
-echo "The mail exchanger of $a is `dig +short $a mx`
+echo "The mail exchanger of $dom is $mx"
